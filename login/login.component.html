@@ -1,0 +1,28 @@
+<div class="middle-box text-center loginscreen animated fadeInDown">
+  <div>
+    <div>
+      <h1 class="logo-name"> <img src="assets/images/logo-text.png" alt="Image" ></h1>
+    </div>
+    <h3>Welcome to Admin</h3>
+    <form [formGroup]="form" class="m-t" (ngSubmit)="login()">
+      <div class="form-group">
+      <div class="adlogin-row">
+        <md-input-container>
+          <input mdInput type="text" class="txt-name" formControlName="email" placeholder="Email Address">
+          <md-error>This field is required</md-error>
+        </md-input-container>
+      </div>
+      <div class="adlogin-row">
+        <md-input-container>
+          <input mdInput type="password" class="txt-password" formControlName="password" placeholder="Password">
+          <md-error>This field is required</md-error>
+        </md-input-container>
+      </div>
+        <button class="adminLogin" type="submit">Login</button>
+      </div>
+      <div class="forgot_link">
+        <a routerLink="/admin/forgot-password">Forgot Password</a>
+      </div>
+    </form>
+  </div>
+</div>
